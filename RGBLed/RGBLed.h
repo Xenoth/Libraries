@@ -1,8 +1,8 @@
 #ifndef RGBLed_h
 #define RGBLed_h
 
-#include "RGB.h"
-#include "Led.h"
+#include <RGB.h>
+#include <Led.h>
 
 class RGBLed
 {
