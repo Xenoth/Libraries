@@ -33,8 +33,7 @@ boolean HYSRF05::inRange(int centimeters)
     delayMicroseconds(10);
     digitalWrite(trigPin, LOW);
 
-    float msRange=centimeters2Miliseconds(centimeters);
+    int ms=pulseIn(echoPin, HIGH);
 
-    float ms=pulseIn(echoPin, HIGH, msRange);
-    return (ms<=msRange);
+    return (miliseconds2Centimeters(ms)<=centimeters);
 }
